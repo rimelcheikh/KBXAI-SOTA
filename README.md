@@ -9,26 +9,85 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
 
 ## Methods in terms of : data type, NN type, explanator, problem and reproducibility
 
+- Step : at which knowledge intervene : Post-hoc (P), Training (T), Designing (D)
 - Data types : Images (IMG), Text (TXT), Tabular (TAB), Anything (ANY) 
-- Black Boxes : Deep neural networks (DNN), Convolutional neural networks (CNN), Recurrent neural networks (RNN), Agnostic (AGN)
-- Explanator : Feature importance (FI), Saliency map (SM), Marginal Contribution (MC), Neural Circuit (NC), Concept (C)
-- Family : Interpretable Local Surrogates (ILS), Occlusion Analysis (OA), Layerwise Relevance Propagation (LRP), Attribution methods(AM), Concept-Based (CB)
-- Problem : Outcome explanation (OUT), Model explanation (MOD)
+- Target to explain : Prediction (PRED), Group of predictions (GRP), Whole model (MOD)
+- Knowledge Form : Ontology (O), Knowledge Graph (G), Library of concepts (C)
 
 <table>
   <tr>
     <th>Name</th>
+    <th>Step</th>
     <th>Data type</th>
-    <th>Black Box</th>
-    <th>Explanator</th>
-    <th>Family</th>
-    <th>Problem</th>
+    <th>Target</th>
+    <th>Knowledge Form</th>
     <th>Code</th>
-    <th>BB Model</th>
-    <th>Dataset</th>
-    <th>Examples</th>
-    <th>Evaluation</th>
-    <th>Axiomatic</th>
+  </tr>
+
+
+  <tr>
+    <td class="name">TCAV<a href="#tcav">[1]</a> </td>
+    <td class="step">P</td>
+    <td class="dt">IMG</td>
+    <td class="prob">GRP</td>
+    <td class="kform">C</td>
+    <td class="code"><a href="https://github.com/tensorflow/tcav">&#x2713;</a> </td>
+  </tr>
+
+  <tr>
+    <td class="name">ACE<a href="#ace">[2]</a> </td>
+    <td class="step">P</td>
+    <td class="dt">IMG</td>
+    <td class="prob">GRP</td>
+    <td class="kform">C</td>
+    <td class="code"><a href="https://github.com/amiratag/ACE"></a> </td>
+  </tr>
+  
+  
+  <tr>
+    <td class="name">CCE<a href="#cce">[3]</a> </td>
+    <td class="step">P</td>
+    <td class="dt">IMG</td>
+    <td class="prob">PRED</td>
+    <td class="kform">C</td>
+    <td class="code"><a href="https://github.com/mertyg/debug-mistakes-cce">&#x2713;</a></td>
+  </tr>
+  
+  
+  <tr>
+    <td class="name">CACE<a href="#cace">[4]</a> </td>
+    <td class="step">P</td>
+    <td class="dt">IMG+TXT</td>
+    <td class="prob">GRP</td>
+    <td class="kform">C</td>
+    <td class="code"><a href="https://github.com/chihkuanyeh/concept_exp">&#x2713;</a></td>
+  </tr>
+
+  <tr>
+    <td class="name">CoCoX<a href="#cocox">[5]</a> </td>
+    <td class="step">P</td>
+    <td class="dt">IMG</td>
+    <td class="prob">PRED</td>
+    <td class="kform">C</td>
+    <td class="code"><a href="https://github.com/arjunakula/CoCoX">&#x2713;</a></td>
+  </tr>
+
+  <tr>
+    <td class="name">X-NeSyL(2022) <a href="#xnesyl">[6]</a> </td>
+    <td class="step">T</td>
+    <td class="dt">IMG</td>
+    <td class="prob">PRED</td>
+    <td class="kform">G</td>
+    <td class="code"><a href="https://github.com/JulesSanchez/X-NeSyL">&#x2713;</a></td>
+  </tr>
+
+  <tr>
+    <td class="name">EDUCE (2019)<a href="#educe">[7]</a> </td>
+    <td class="step">T</td>
+    <td class="dt">ILG+TXT</td>
+    <td class="prob">PRED</td>
+    <td class="kform">C</td>
+    <td class="code"><a href="">&#x2715;</a></td>
   </tr>
   
   
@@ -49,115 +108,12 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   
   
   <tr>
-    <td class="name">TCAV<a href="#tcav">[7]</a> </td>
-    <td class="dt">IMG</td>
-    <td class="bb">CNN</td>
-    <td class="expl">C</td>
-    <td class="fam">CB</td>
-    <td class="prob">MOD</td>
-    <td class="code"><a href="https://github.com/tensorflow/tcav">&#x2713;</a> </td>
-    <td class="bbmod"><a href="https://pytorch.org/hub/pytorch_vision_googlenet/">GoogleNet</a>
-                      <a href="https://keras.io/api/applications/inceptionv3/">InceptionV3</a></td>
-    <td class="ds"><a href="https://www.kaggle.com/datasets/google-brain/messidor2-dr-grades">MESSIDOR-2 DR</a></td>
-    <td class="ex">&#x2713;</td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[I]</a></td>
-    <td class="axioms">&#x2715;</td>
-  </tr>
-  
-  
-  <tr>
-    <td class="name">CCE<a href="#abid">[8]</a> </td>
-    <td class="dt">IMG</td>
-    <td class="bb">CNN</td>
-    <td class="expl">C</td>
-    <td class="fam">CB</td>
-    <td class="prob">OUT+MOD</td>
-    <td class="code"><a href="https://github.com/mertyg/debug-mistakes-cce">&#x2713;</a></td>
-    <td class="bbmod">ResNet18 <br> <a href="https://github.com/mattgroh/fitzpatrick17k">Fitzpatrick17k</a></td>
-    <td class="ds"><a href="https://github.com/mattgroh/fitzpatrick17k">Fitzpatrick17k</a>
-                    <a href="https://github.com/bethgelab/imagecorruptions">imagecorruptions</a></td>
-    <td class="ex">&#x2713;</td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[J]</a></td>
-    <td class="axioms">&#x2715;</td>
-  </tr>
-  
-  
-  <tr>
-    <td class="name">Completeness-aware<a href="#yeh">[9]</a> </td>
-    <td class="dt">ANY</td>
-    <td class="bb">DNN</td>
-    <td class="expl">C</td>
-    <td class="fam">CB</td>
-    <td class="prob">OUT+MOD</td>
-    <td class="code"><a href="https://github.com/chihkuanyeh/concept_exp">&#x2713;</a></td>
-    <td class="bbmod"><a href="https://keras.io/api/applications/inceptionv3/">InceptionV3</a></td>
-    <td class="ds"><a href="https://academictorrents.com/details/1490aec815141cdb50a32b81ef78b1eaf6b38b03">AwA</a> <br>
-                    <a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews">IMDB</a></td>
-    <td class="ex">&#x2713;</td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[K]</a></td>
-    <td class="axioms">&#x2713;</td>
-  </tr>
-  
-  <tr>
-    <td class="name">X-NeSyL(2022) <a href="#diaz">[10]</a> </td>
-    <td class="dt">IMG</td>
-    <td class="bb">DNN</td>
-    <td class="expl"></td>
-    <td class="fam">AM</td>
-    <td class="prob">MOD</td>
-    <td class="code"><a href="https://github.com/JulesSanchez/X-NeSyL">&#x2713;</a></td>
-    <td class="bbmod"><a href=""></a></td>
-    <td class="ds"><a href="https://github.com/ari-dasci/OD-MonuMAI">MonuMAI</a></td>
-    <td class="ex">&#x2713;</td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[M]</a></td>
-    <td class="axioms">&#x2715;</td>
-  </tr>
-  
-  
-  <tr>
-    <td class="name">CoCoX<a href="#">[11]</a> </td>
-    <td class="dt">IMG</td>
-    <td class="bb">CNN</td>
-    <td class="expl">Concept</td>
-    <td class="fam"></td>
-    <td class="prob"></td>
-    <td class="code"><a href="https://github.com/arjunakula/CoCoX">&#x2713;</a> </td>
-    <td class="bbmod"><a href=""></a></td>
-    <td class="ds"></td>
-    <td class="ex">&#x2713;</td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[]</a></td>
-    <td class="axioms"></td>
-  </tr>
-
-  <tr>
     <td class="name"><a href="#">[]</a> </td>
+    <td class="step"></td>
     <td class="dt"></td>
-    <td class="bb"></td>
-    <td class="expl"></td>
-    <td class="fam"></td>
     <td class="prob"></td>
-    <td class="code"><a href=""></a> </td>
-    <td class="bbmod"><a href=""></a></td>
-    <td class="ds"></td>
-    <td class="ex"></td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[]</a></td>
-    <td class="axioms"></td>
-  </tr>
-  
-  
-  <tr>
-    <td class="name"><a href="#">[]</a> </td>
-    <td class="dt"></td>
-    <td class="bb"></td>
-    <td class="expl"></td>
-    <td class="fam"></td>
-    <td class="prob"></td>
-    <td class="code"><a href=""></a> </td>
-    <td class="bbmod"><a href=""></a></td>
-    <td class="ds"></td>
-    <td class="ex"></td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[]</a></td>
-    <td class="axioms"></td>
+    <td class="kform"></td>
+    <td class="code"><a href="">&#x2713;</a></td>
   </tr>
  
   
