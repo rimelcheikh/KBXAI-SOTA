@@ -10,7 +10,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
 ## Methods in terms of : data type, NN type, explanator, problem and reproducibility
 
 - Step : at which knowledge intervene : Post-hoc (P), Training (T), Designing (D)
-- Data types : Images (IMG), Text (TXT), Tabular (TAB), Anything (ANY) 
+- Data types : Images (IMG), Text (TXT), Tabular (TAB), Anything (ANY), Other (OTH) 
 - Target to explain : Prediction (PRED), Group of predictions (GRP), Whole model (MOD)
 - Knowledge Form : Ontology (O), Knowledge Graph (G), Library of concepts (C)
 
@@ -89,22 +89,34 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
     <td class="kform">C</td>
     <td class="code"><a href="">&#x2715;</a></td>
   </tr>
-  
-  
+
   <tr>
-    <td class="name">Bisturi (2022)<a href="#bisturi">[5]</a> </td>
-    <td class="dt">IMG</td>
-    <td class="bb">CNN</td>
-    <td class="expl">NC</td>
-    <td class="fam">CB</td>
+    <td class="name">CLANN (2007)<a href="#clann">[8]</a> </td>
+    <td class="step">D</td>
+    <td class="dt">TAB</td>
     <td class="prob">MOD</td>
-    <td class="code"><a href="https://github.com/rmassidda/bisturi">&#x2713;</a> </td>
-    <td class="bbmod">AlexNet ResNet DenseNet </td>
-    <td class="ds"><a href="https://github.com/CSAILVision/places365">Places-365</a></td>
-    <td class="ex">&#x2713;</td>
-    <td class="eval"><a href="https://github.com/rimelcheikh/RnX-SOTA/blob/main/evaluations.md">[L]</a></td>
-    <td class="axioms">&#x2715;</td>
+    <td class="kform">Concept Lattice</td>
+    <td class="code"><a href="">&#x2715;</a></td>
   </tr>
+
+  <tr>
+    <td class="name">DeepGONet<a href="#deepgonet">[9]</a> </td>
+    <td class="step">D</td>
+    <td class="dt">OTH</td>
+    <td class="prob">MOD</td>
+    <td class="kform">O</td>
+    <td class="code"><a href="https://forge.ibisc.univ-evry.fr/vbourgeais/DeepGONet">&#x2713;</a></td>
+  </tr>
+
+  <tr>
+    <td class="name">OntoClassifier<a href="#ontoclassifier">[10]</a> </td>
+    <td class="step">D</td>
+    <td class="dt">IMG</td>
+    <td class="prob">PRED</td>
+    <td class="kform">O</td>
+    <td class="code"><a href="">&#x2715;</a></td>
+  </tr>
+
   
   
   <tr>
