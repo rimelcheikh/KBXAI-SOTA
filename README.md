@@ -26,7 +26,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
 
 
   <tr>
-    <td class="name">TCAV<a href="#tcav">[1]</a> </td>
+    <td class="name">TCAV (2018) <a href="#tcav">[1]</a> </td>
     <td class="step">P</td>
     <td class="dt">IMG</td>
     <td class="prob">GRP</td>
@@ -35,7 +35,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">ACE<a href="#ace">[2]</a> </td>
+    <td class="name">ACE (2019) <a href="#ace">[2]</a> </td>
     <td class="step">P</td>
     <td class="dt">IMG</td>
     <td class="prob">GRP</td>
@@ -45,7 +45,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   
   
   <tr>
-    <td class="name">CCE<a href="#cce">[3]</a> </td>
+    <td class="name">CCE (2022) <a href="#cce">[3]</a> </td>
     <td class="step">P</td>
     <td class="dt">IMG</td>
     <td class="prob">PRED</td>
@@ -55,7 +55,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   
   
   <tr>
-    <td class="name">CACE<a href="#cace">[4]</a> </td>
+    <td class="name">CACE (2022) <a href="#cace">[4]</a> </td>
     <td class="step">P</td>
     <td class="dt">IMG+TXT</td>
     <td class="prob">GRP</td>
@@ -64,7 +64,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">CoCoX<a href="#cocox">[5]</a> </td>
+    <td class="name">CoCoX (2020) <a href="#cocox">[5]</a> </td>
     <td class="step">P</td>
     <td class="dt">IMG</td>
     <td class="prob">PRED</td>
@@ -73,7 +73,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">X-NeSyL(2022) <a href="#xnesyl">[6]</a> </td>
+    <td class="name">X-NeSyL (2022) <a href="#xnesyl">[6]</a> </td>
     <td class="step">T</td>
     <td class="dt">IMG</td>
     <td class="prob">PRED</td>
@@ -82,7 +82,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">EDUCE (2019)<a href="#educe">[7]</a> </td>
+    <td class="name">EDUCE (2019) <a href="#educe">[7]</a> </td>
     <td class="step">T</td>
     <td class="dt">ILG+TXT</td>
     <td class="prob">PRED</td>
@@ -91,7 +91,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">CLANN (2007)<a href="#clann">[8]</a> </td>
+    <td class="name">CLANN (2007) <a href="#clann">[8]</a> </td>
     <td class="step">D</td>
     <td class="dt">TAB</td>
     <td class="prob">MOD</td>
@@ -100,7 +100,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">DeepGONet<a href="#deepgonet">[9]</a> </td>
+    <td class="name">DeepGONet (2021) <a href="#deepgonet">[9]</a> </td>
     <td class="step">D</td>
     <td class="dt">OTH</td>
     <td class="prob">MOD</td>
@@ -109,7 +109,7 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
   </tr>
 
   <tr>
-    <td class="name">OntoClassifier<a href="#ontoclassifier">[10]</a> </td>
+    <td class="name">OntoClassifier (2021) <a href="#ontoclassifier">[10]</a> </td>
     <td class="step">D</td>
     <td class="dt">IMG</td>
     <td class="prob">PRED</td>
@@ -243,21 +243,14 @@ the learned black box predictor is queried with a test dataset D={X,Y} to produc
 
 
 ## References:
-<div class="csl-entry"> <a id="bisturi"> [5] </a> Massidda, Riccardo, and Davide Bacciu. "Knowledge-Driven Interpretation of Convolutional Neural Networks." </div>
+<div class="csl-entry"> <a id="tcav"> [1] </a> Kim, Been, Martin Wattenberg, Justin Gilmer, Carrie Cai, James Wexler, Fernanda Viegas, et Rory Sayres. « Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV) ». arXiv, 7 juin 2018. http://arxiv.org/abs/1711.11279.</div>
 
-<div class="csl-entry"> <a id="tcav"> [7] </a> Kim, Been, Martin Wattenberg, Justin Gilmer, Carrie Cai, James Wexler, Fernanda Viegas, et Rory Sayres. « Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV) ». arXiv, 7 juin 2018. http://arxiv.org/abs/1711.11279.</div>
+<div class="csl-entry"> <a id="cce"> [3] </a>Abid, Abubakar, Mert Yuksekgonul, et James Zou. « Meaningfully Debugging Model Mistakes Using Conceptual Counterfactual Explanations ». In Proceedings of the 39th International Conference on Machine Learning, 66‑88. PMLR, 2022. https://proceedings.mlr.press/v162/abid22a.html. </div>
 
-<div class="csl-entry"> <a id="abid"> [8] </a>Abid, Abubakar, Mert Yuksekgonul, et James Zou. « Meaningfully Debugging Model Mistakes Using Conceptual Counterfactual Explanations ». In Proceedings of the 39th International Conference on Machine Learning, 66‑88. PMLR, 2022. https://proceedings.mlr.press/v162/abid22a.html. </div>
+<div class="csl-entry"> <a id="cace"> [4] </a>Yeh, Chih-Kuan, Been Kim, Sercan O. Arik, Chun-Liang Li, Tomas Pfister, et Pradeep Ravikumar. « On Completeness-aware Concept-Based Explanations in Deep Neural Networks ». arXiv, 7 février 2022. https://doi.org/10.48550/arXiv.1910.07969. </div>
 
-<div class="csl-entry"> <a id="yeh"> [9] </a>Yeh, Chih-Kuan, Been Kim, Sercan O. Arik, Chun-Liang Li, Tomas Pfister, et Pradeep Ravikumar. « On Completeness-aware Concept-Based Explanations in Deep Neural Networks ». arXiv, 7 février 2022. https://doi.org/10.48550/arXiv.1910.07969.
-</div>
+<div class="csl-entry"> <a id="xnesyl"> [6] </a> Díaz-Rodríguez, Natalia, et al. "EXplainable Neural-Symbolic Learning (X-NeSyL) methodology to fuse deep learning representations with expert knowledge graphs: The MonuMAI cultural heritage use case." Information Fusion 79 (2022): 58-83.</div>
 
-<div class="csl-entry"> <a id="diaz"> [10] </a> Díaz-Rodríguez, Natalia, et al. "EXplainable Neural-Symbolic Learning (X-NeSyL) methodology to fuse deep learning representations with expert knowledge graphs: The MonuMAI cultural heritage use case." Information Fusion 79 (2022): 58-83.</div>
-
-<div class="csl-entry"> <a id=""> [11] </a> </div>
-
-
-<div class="csl-entry"> <a id=""> [] </a> </div>
 
 
 
